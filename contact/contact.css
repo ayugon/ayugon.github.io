@@ -1,0 +1,294 @@
+@charset "UTF=8";
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
+}
+img{
+    max-width: 100%;
+    vertical-align: bottom;
+}
+.container{
+    max-width: 800px;
+    margin:20px auto 150px;
+    padding: 0 10%;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.sub-title{
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+.btn{
+    width: 300px;
+    padding:15px 35px;
+    font-size: 1.5rem;
+    color: #000;
+    background-color: #fff;
+    border: 4px solid #000;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+
+/*-------------------------------header---------------------------*/
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #fff;
+    z-index: 6;
+}
+.nav-list{
+    display: flex;
+    margin-right: 20px;
+}
+.nav-item{
+    margin-left: 30px;
+    font-weight: bold;
+}
+.bergur-menu{
+    position: relative;
+    right: 4vw;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+.bar{
+    position: absolute;
+    left: 3px;
+    width:18px;
+    height: 3px;
+    background-color:#000;
+}
+.bar-top{
+    top:3px;
+}
+.bar-mid{
+    top:50%;
+    transform: translateY(-50%);
+}
+.bar-bottom{
+    bottom: 3px;
+}
+
+/*-----------------------------------mainvisual-----------------------------------------------*/
+.mainvisual{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:100px 10%;
+}
+.site-title{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+form p{
+    margin-bottom: 10px;
+}
+form li+li{
+    margin-top: 50px;
+}
+label{
+    margin-bottom: 10px;
+    display:inline-block;
+}
+input, textarea{
+    border:1px solid #000;
+    display: inline-block;
+    width: 100%;
+}
+input[type="checkbox"]{
+    max-width: 20px;
+}
+form li:first-of-type label{
+    margin-right: 20px;
+}
+input{
+    font-size: 1rem;    
+    padding: 2px;
+}
+textarea{
+    height: 10rem;
+}
+form li:nth-of-type(8){
+    text-align: center;
+}
+
+.check::after{
+    content: "必須";
+    margin-left: 20px;
+    width:30px;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.8rem;
+    padding:0 5px;
+}
+
+
+/*----------------------------footer------------------------------------------------------------*/
+#footer{
+    height: 100px;
+    background-color: #000;
+    position: relative;
+    z-index: 2;
+}
+small{
+    color:#fff;
+    display: block;
+    text-align: center;
+    padding:20px;
+}
+#page-top a{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:80px;
+    height:80px;
+    background-image: url(../img/Group\ 64.png);
+    transition:all 0.3s;
+}
+#page-top a:hover{
+    transform: scale(1.2);
+}   
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 10px;
+    z-index: 2;
+      /*はじめは非表示*/
+    opacity: 1;
+    transform: translateY(100px);
+  }
+  
+  /*　上に上がる動き　*/
+  
+  #page-top.UpMove{
+    animation: UpAnime 0.5s forwards;
+  }
+  @keyframes UpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+  /*　下に下がる動き　*/
+  
+  #page-top.DownMove{
+    animation: DownAnime 0.5s forwards;
+  }
+  @keyframes DownAnime{
+    from {
+      opacity: 1;
+    transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(100px);
+    }
+  }
+
+
+
+
+/*-----------------------------レスポンシブ---------------------------------------------------*/
+@media screen and (max-width:700px) {
+    .wrapper{
+        flex-direction: column;
+} 
+    .wrapper-item{
+        width: 100%;
+        margin-bottom: 50px;
+} 
+    .container{
+        margin:0px auto 50px;
+        padding:0 10%;
+}
+/*-------------------------------header-------------------------------------------------*/
+.nav-list{
+    display: none;
+}
+.nav-list.active{
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100vh;
+    background-color:#000;
+    text-align: center;
+    justify-content: center;
+}
+.fadein{
+    animation: fadeinanime 1s 1 ease;
+}
+@keyframes fadeinanime{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.nav-item{
+    margin-bottom: 30px;
+}
+.nav-item a{
+    color:#fff;
+}
+
+
+.bergur-menu{
+    display: flex;
+    z-index: 4;
+}
+.bar-top.active{
+    top:13px;
+    transform: rotate(45deg);
+    background-color:#fff;
+}
+.bar-mid.active{
+    opacity: 0;
+}
+.bar-bottom.active{
+    bottom:14px;
+    transform: rotate(-45deg);
+    background-color:#fff;
+}      
+/*-------------------------------mainvisual--------------------------------------------*/
+.site-title{
+    font-size: 4rem;
+    font-weight: bold;
+}
+li:nth-of-type(8){
+    display: flex;
+    justify-content: center;
+}
+
+}
+
+   
+    

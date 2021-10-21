@@ -320,9 +320,6 @@ small{
 #about .btn{
     margin-top: 50px;
 }
-#about .container{
-    margin-top: 80px;
-}
 #about img{
     width:50%
 }
@@ -361,8 +358,9 @@ small{
     margin-bottom: 10px;
 }
 .border{
-    padding: 10px 50px;
+    padding: 10px 10px;
     border: 5px #000 solid;
+    text-align:center;
 }
 .contact-btn:hover{
     background-color: greenyellow;

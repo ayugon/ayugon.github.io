@@ -66,7 +66,6 @@ img{
 .header{
     position: fixed;
     top:0;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -121,7 +120,7 @@ img{
     justify-content: space-between;
 }
 .site-title{
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: bold;
 }
 .main-wrapper-item{
@@ -158,8 +157,9 @@ img{
 
 /*----------------------------------contact---------------------------------------------------*/
 .border{
-    padding: 50px 100px;
+    padding: 50px 10px;
     border: 5px #000 solid;
+    text-align:center;
 }
 .contact-btn:hover{
     background-color: greenyellow;

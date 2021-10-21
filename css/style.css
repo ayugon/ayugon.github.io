@@ -7,6 +7,9 @@ a{
     display: inline-block;
     color: #000;
 }
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+}
 img{
     max-width: 100%;
     vertical-align: bottom;

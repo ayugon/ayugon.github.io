@@ -306,7 +306,7 @@ small{
     align-items: flex-start;
 }
 .site-title{
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: bold;
 }
 .main-wrapper-item{
@@ -337,8 +337,9 @@ small{
         margin-bottom: 10px;
     }
     .border{
-        padding: 10px 50px;
+        padding: 10px 10px;
         border: 5px #000 solid;
+        text-align:center;
     }
     .contact-btn:hover{
         background-color: greenyellow;
